@@ -8,7 +8,7 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  pathPrefix: "/hit-your-protein",
+  pathPrefix: "/protein-calculator",
   plugins: [
     'gatsby-plugin-postcss',
   ],
