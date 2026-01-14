@@ -1,99 +1,68 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.com">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+# Daily Protein Planner
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A cohesive, single-page web application built with Gatsby (React) and Tailwind CSS. This tool helps users calculate exactly how many grams of specific food sources they need to eat to hit their daily protein goals.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.com/docs/gatsby-starters/)._
+## Features
 
-## 🚀 Quick start
+### User Inputs
+- Body Weight Input: Toggle between lbs and kg.
+- Protein Goal: Auto-calculated based on body weight (1g per lb) with manual override capability.
 
-1.  **Create a Gatsby site.**
+### Protein Source Selection
+- Select from a list of common protein sources including Chicken Breast, Salmon, Tofu, Whey Protein, Egg Whites, and Greek Yogurt.
+- Manage selections via a toggle interface.
 
-    Use the Gatsby CLI ([install instructions](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-0/#gatsby-cli)) to create a new site, specifying the hello-world starter.
+### Smart Distribution Logic
+- Adjust the percentage contribution of each selected protein source.
+- Automatic validation ensures the total distribution equals 100%.
+- Auto-fix functionality to normalize values if they do not sum to 100%.
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+### Dashboard
+- Displays the exact raw weight in grams and ounces for each food source.
+- Shows the protein contribution breakdown for each item.
 
-1.  **Start developing.**
+## Tech Stack
 
-    Navigate into your new site’s directory and start it up.
+- **Framework**: Gatsby (React)
+- **Styling**: Tailwind CSS
+- **State Management**: React Hooks (useState, useEffect)
+- **Deployment**: GitHub Pages
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+## Installation
 
-1.  **Open the source code and start editing!**
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/ryanson/hit-your-protein.git
+   ```
 
-    Your site is now running at `http://localhost:8000`!
+2. Navigate to the project directory:
+   ```bash
+   cd hit-your-protein
+   ```
 
-    Note: You'll also see a second link: `http://localhost:8000/___graphql`. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/getting-started/part-4/#use-graphiql-to-explore-the-data-layer-and-write-graphql-queries).
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+4. Start the development server:
+   ```bash
+   npm start
+   ```
+   The site will be available at `http://localhost:8000`.
 
-## 🚀 Quick start (Netlify)
+## Deployment
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+This project is configured for deployment to GitHub Pages.
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+To deploy the application:
 
-## 🧐 What's inside?
+```bash
+npm run deploy
+```
 
-A quick look at the top-level files and directories you'll see in a typical Gatsby project.
+This command builds the project with the correct path prefix and pushes the `public` directory to the `gh-pages` branch.
 
-    .
-    ├── node_modules
-    ├── src
-    ├── .gitignore
-    ├── gatsby-browser.js
-    ├── gatsby-config.js
-    ├── gatsby-node.js
-    ├── gatsby-ssr.js
-    ├── LICENSE
-    ├── package.json
-    └── README.md
+## License
 
-1.  **`/node_modules`**: This directory contains all of the modules of code that your project depends on (npm packages) are automatically installed.
-
-1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
-
-1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
-
-1.  **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-browser/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
-
-1.  **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. (Check out the [config docs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/) for more detail).
-
-1.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-node/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
-
-1.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.com/docs/reference/config-files/gatsby-ssr/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
-
-1.  **`LICENSE`**: This Gatsby starter is licensed under the 0BSD license. This means that you can see this file as a placeholder and replace it with your own license.
-
-1.  **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
-
-1.  **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
-
-Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
-
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
-
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[Build, Deploy, and Host On Netlify](https://netlify.com)
-
-The fastest way to combine your favorite tools and APIs to build the fastest sites, stores, and apps for the web. And also the best place to build, deploy, and host your Gatsby sites.
-
-<!-- AUTO-GENERATED-CONTENT:END -->
+This project is open source and available under the MIT License.
